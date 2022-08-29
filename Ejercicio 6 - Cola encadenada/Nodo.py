@@ -2,7 +2,7 @@ class Nodo:
     __dato = None
     __siguiente = None
 
-    def __init__(self, dato=None):
+    def __init__(self, dato):
         self.__dato = dato
         self.__siguiente = None
 
