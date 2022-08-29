@@ -4,12 +4,9 @@ class Pila:
     __max = 3
 
     def __init__(self, max=3):
-        self.__items = []
+        self.__items = [None for _ in range(max)]
         self.__tope = -1
         self.__max = max
-
-    def __str__(self):
-        return f"{self.__items}"
 
     def empty(self):
         return self.__tope == -1
@@ -20,7 +17,7 @@ class Pila:
     def push(self, x):
         if not self.full():
             self.__tope += 1
-            self.__items.insert(self.__tope, x)
+            self.__items[self.__tope] = x
         else:
             print("Pila llena")
 
